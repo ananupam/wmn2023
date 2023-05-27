@@ -13,12 +13,15 @@ const Navbar = () => {
       setIsLoggedIn(false);
     };
 
-    useEffect(()=>{
-      if(localStorage.getItem("isLogin"===true)){
-        setIsLoggedIn(true);
-        console.log("we have logged in now");
-      }
-    })
+    const getIsLoggedIn = () => {
+      return localStorage.getItem("isLogin") === "true";
+    };
+    
+    useEffect(() => {
+      setIsLoggedIn(getIsLoggedIn());
+    }, []);
+
+    
   return (
     <div>
         <div className='main_nav'>
