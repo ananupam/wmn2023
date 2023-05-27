@@ -1,15 +1,17 @@
-import React from 'react'
+import React from 'react';
+import './Navbar.css'
 
-const Header = () => {
+const Navbar = () => {
   return (
     <div>
         <div className='main_nav'>
+            <div className='logo_container'>CYSTER</div>
             <div className='element_container'>
                 <ul>
                     <li>Guide</li>
                     <li>Consult</li>
                     <li>Dashboard</li>
-                    <li>SignUp/In</li>
+                    <li>Signup</li>
                 </ul>
             </div>
         </div>
@@ -17,4 +19,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Navbar
