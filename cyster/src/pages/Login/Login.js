@@ -19,14 +19,6 @@ const Login = () => {
 
   const handleModeChange = (e) => {
     setMode(e.target.value);
-    const button = document.querySelector(`.${mode}-button`);
-    if (button) {
-      button.disabled = false;
-    }
-    const otherButton = document.querySelector(`.${mode === 'login' ? 'signup-button' : 'login-button'}`);
-    if (otherButton) {
-      otherButton.disabled = true;
-    }
   };
 
   return (
@@ -39,7 +31,7 @@ const Login = () => {
           checked={mode === 'login'}
           onChange={handleModeChange}
         />
-        <label htmlFor='login'>Login</label>
+        <label >Login</label>
         <input
           type='radio'
           name='mode'
@@ -47,16 +39,8 @@ const Login = () => {
           checked={mode === 'signup'}
           onChange={handleModeChange}
         />
-        <label htmlFor='signup'>Signup</label>
-        {mode === 'login' ? (
-          <input
-            type='email'
-            placeholder='Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        ) : null}
-        {mode === 'signup' ? (
+        <label >Signup</label>
+          {mode === 'signup' ? (
           <input
             type='text'
             placeholder='Name'
@@ -64,6 +48,13 @@ const Login = () => {
             onChange={(e) => setName(e.target.value)}
           />
         ) : null}
+          <input
+            type='email'
+            placeholder='Email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        
         <input
           type='password'
           placeholder='Password'
@@ -86,13 +77,7 @@ const Login = () => {
             onChange={(e) => setPhone(e.target.value)}
           />
         ) : null}
-        <button
-          type='submit'
-          onClick={handleSubmit}
-          className={mode === 'login' ? 'login-button' : 'signup-button'}
-        >
-          {mode === 'login' ? 'Login' : 'Signup'}
-        </button>
+        <button type='submit' onClick={handleSubmit}>Submit</button>
       </div>
     </div>
   );
