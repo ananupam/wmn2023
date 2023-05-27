@@ -90,7 +90,6 @@ const Login = () => {
           type='submit'
           onClick={handleSubmit}
           className={mode === 'login' ? 'login-button' : 'signup-button'}
-          disabled={mode === 'login'}
         >
           {mode === 'login' ? 'Login' : 'Signup'}
         </button>
