@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import './Navbar.css'
 
 const Navbar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const handleLogin = () => {
+      setIsLoggedIn(true);
+    };
+
+    const handleLogout = () => {
+      setIsLoggedIn(false);
+    };
+
   return (
     <div>
         <div className='main_nav'>
@@ -10,8 +20,9 @@ const Navbar = () => {
                 <ul>
                     <li>Guide</li>
                     <li>Consult</li>
-                    <li>Dashboard</li>
-                    <li>Signup</li>
+                    {isLoggedIn ? (<li>Profile</li>) : null}
+                    <li>{isLoggedIn ? (
+                    <button onClick={handleLogout}>Logout</button>) : (<button onClick={handleLogin}>Login</button>)}</li>
                 </ul>
             </div>
         </div>
