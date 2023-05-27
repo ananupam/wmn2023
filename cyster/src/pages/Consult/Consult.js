@@ -28,7 +28,7 @@ const Consult = () => {
               <h3>{doctor.name}</h3>
               <span>{doctor.speciality}</span>
               <br />
-              <button className='consult_button'><Link to={`/appointment/:${doctor.name}`}>Book an Appointment</Link></button>
+              <button className='consult_button'><Link to={`/appointment/${doctor.name}`}>Book an Appointment</Link></button>
             </div>
           ))}
         </div>

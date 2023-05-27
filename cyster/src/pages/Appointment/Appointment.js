@@ -5,12 +5,13 @@ const Appointment = () => {
   const [date, setDate] = useState('');
   const [doctor, setDoctor] = useState('');
   const [time, setTime] = useState('');
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState('Scheduled');
 
   const gid = useParams().docID;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(time,status);
       const response = await fetch('http://localhost:5005/appointment', {
         method: 'POST',
         headers: {
@@ -135,6 +136,7 @@ const Appointment = () => {
           <label>08:00</label>
           </div>
           <button type='submit' onClick={handleSubmit}>Submit</button>
+          <button type='submit'><Link to={`/consult`}>Cancel</Link></button>
       </div>
     </div>
   )
