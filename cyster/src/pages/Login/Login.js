@@ -10,6 +10,7 @@ const Login = () => {
 
 
   const handleSubmit = async (e) => {
+    localStorage.setItem("isLogin",true);
     e.preventDefault();
     if (mode === 'login') {
       const response = await fetch('http://localhost:5005/user/login', {

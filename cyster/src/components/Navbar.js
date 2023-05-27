@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useEffect, useState }  from 'react';
 import './Navbar.css'
 
 const Navbar = () => {
@@ -6,8 +6,6 @@ const Navbar = () => {
 
 
     const handleLogin = () => {
-      setIsLoggedIn(true);
-      console.log(localStorage.getItem("username"));
       window.location.href = '/login';
     };
 
@@ -15,6 +13,12 @@ const Navbar = () => {
       setIsLoggedIn(false);
     };
 
+    useEffect(()=>{
+      if(localStorage.getItem("isLogin"===true)){
+        setIsLoggedIn(true);
+        console.log("we have logged in now");
+      }
+    })
   return (
     <div>
         <div className='main_nav'>
