@@ -1,10 +1,13 @@
 import React,{ useState, useEffect } from 'react';
+import { Link,useParams } from 'react-router-dom';
 
 const Appointment = () => {
   const [date, setDate] = useState('');
   const [doctor, setDoctor] = useState('');
   const [time, setTime] = useState('');
   const [status, setStatus] = useState('');
+
+  const gid = useParams().docID;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +18,7 @@ const Appointment = () => {
         },
         body: JSON.stringify({
           date: date,
-          doctor: doctor,
+          doctor: gid,
           time: time,
           status: status,
         })
@@ -26,6 +29,7 @@ const Appointment = () => {
         throw new Error(responseData.error);
       }else{
         console.log("appointment successful");
+        setDoctor(gid);
       }
       
   };
@@ -37,12 +41,7 @@ const Appointment = () => {
   return (
     <div className='main_appointment'>
       <div className="appointment_form">
-      <input
-            type='text'
-            placeholder='Doctor'
-            value={doctor}
-            onChange={(e) => setDoctor(e.target.value)}
-          />
+      <h2>{gid}</h2>
         <input
             type='text'
             placeholder='Date'
