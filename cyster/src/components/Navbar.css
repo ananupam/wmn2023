@@ -20,7 +20,8 @@
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    font-size: 15px;
+    font-size: 18px;
+    color: grey;
 }
 
 
@@ -29,10 +30,10 @@
 }
 
 .element_container{
-    margin-right: 5%;
+    margin-right: 8%;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: grey;
 }

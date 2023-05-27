@@ -1,0 +1,49 @@
+.monthly-tracker {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .weekly-heatmap {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .weekly-heatmap h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .react-calendar-heatmap rect {
+    stroke: #fff;
+  }
+  
+  /* Color scales */
+  
+  .react-calendar-heatmap .color-empty {
+    fill: #ebedf0;
+  }
+  
+  .react-calendar-heatmap .color-scale-1 {
+    fill: #cce5ff;
+  }
+  
+  .react-calendar-heatmap .color-scale-2 {
+    fill: #99cfff;
+  }
+  
+  .react-calendar-heatmap .color-scale-3 {
+    fill: #66b2ff;
+  }
+  
+  .react-calendar-heatmap .color-scale-4 {
+    fill: #3399ff;
+  }
+  
+  .react-calendar-heatmap .color-scale-5 {
+    fill: #0080ff;
+  }

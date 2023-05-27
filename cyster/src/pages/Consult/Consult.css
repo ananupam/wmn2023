@@ -1,0 +1,30 @@
+.consult_list{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.consult_container{
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.1);
+    z-index: 1000;
+    text-align: left;
+    overflow: none;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.consult_button , .consult_button a{
+    background-color:#50ceac;
+    border:2px solid #50ceac;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 3%;
+}
+
+.consult_main_head{
+    font-size: 20px;
+    text-align: center;
+}

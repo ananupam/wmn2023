@@ -65,6 +65,7 @@ const Login = () => {
   return (
     <div className='main_login'>
       <div className='login_form'>
+        <div className='radio_options'>
         <input
           type='radio'
           name='mode'
@@ -73,6 +74,7 @@ const Login = () => {
           onChange={handleModeChange}
         />
         <label >Login</label>
+
         <input
           type='radio'
           name='mode'
@@ -81,6 +83,7 @@ const Login = () => {
           onChange={handleModeChange}
         />
         <label >Signup</label>
+        </div>
           {mode === 'signup' ? (
           <input
             type='text'
@@ -89,6 +92,8 @@ const Login = () => {
             onChange={(e) => setName(e.target.value)}
           />
         ) : null}
+        
+
           <input
             type='email'
             placeholder='Email'

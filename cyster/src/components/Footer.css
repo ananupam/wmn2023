@@ -1,19 +1,31 @@
+*{
+    font-family: muli;
+    
+}
+
 .main_foot{
     width:100%;
     border-top: 2px solid black;
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    background: #3e312a;
 }
 
-.about_container{
+.about_container ul{
     list-style-type: none;
+    font-size: 17px;
+    color: rgb(193, 193, 193);
 }
 
-.contact_container{
+.contact_container ul{
     list-style-type: none;
+    font-size: 17px;
+    color: rgb(193, 193, 193);
 }
 
-.company_container{
+.company_container ul{
     list-style-type: none;
+    font-size: 17px;
+    color: rgb(193, 193, 193);
 }

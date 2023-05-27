@@ -1,4 +1,5 @@
 import React,{ useState, useEffect } from 'react';
+import './Appointment.css';
 import { Link,useParams } from 'react-router-dom';
 
 const Appointment = () => {
@@ -41,23 +42,27 @@ const Appointment = () => {
 
   return (
     <div className='main_appointment'>
-      <div className="appointment_form">
-      <h2>{gid}</h2>
+      <div className='appointments_left'>
+                <p>APPOINTMENT BOOKING PORTAL</p>
+                <ul className='bookings_left_description'>
+                    <li>We offer comfortable and convenient 24/7 bookings.</li>
+                    <li>We save your time- No waiting rooms, no road travel.</li>
+                    <li>We offer a wide variety of doctors to choose from.</li>
+                </ul>
+                <p> HASSLE-FREE BOOKINGS.</p>
+            </div>
+      <div className="appointments_right">
+      <p>{gid}</p>
         <input
             type='text'
             placeholder='Date'
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
-          <input
-            type='text'
-            placeholder='Status'
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
-          />
+
 
 <div className='mor_slots'>
-          <h1>Morning 09:00 AM to 12:00 PM</h1>
+          <p>Morning 09:00 AM to 12:00 PM</p>
 
           <input
           type='radio'

@@ -2,6 +2,37 @@
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.login_form input{
+    padding: 2%;
+    margin-top: 5%;
+    font-size: 15px;
+    border:none;
+    border-bottom: 1px solid #adadad;
+    transition: width 0.8s ease-in-out;
+}
+
+.login_form input:focus{
+    border:none;
+    border-bottom: 3px solid rgb(135, 178, 231);
+    outline: none;
+}
+
+.login_form button{
+    padding: 2%;
+    margin-top: 10%;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 15px;
+}
+
+ .radio_options{
+    align-items: right;
+    padding-right: 10px;
 }
