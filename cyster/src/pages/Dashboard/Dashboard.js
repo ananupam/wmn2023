@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
 
@@ -21,6 +21,18 @@ const Dashboard = () => {
             count: monthData[dayIndex] || 5,
           }));
         });
+
+
+  useEffect(() => {
+    // Fetch doctors from MongoDB
+    const fetchData = async () => {
+      const response = await fetch('http://localhost:5005/tracker/');
+      const datas = await response.json();
+      data= datas;
+    };
+
+    fetchData();
+  }, []);
         
       
         console.log(data)
