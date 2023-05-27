@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from 'react';
-import './Navbar.css'
+import './Navbar.css';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,9 +29,9 @@ const Navbar = () => {
             <div className='logo_container'>CYSTER</div>
             <div className='element_container'>
                 <ul>
-                    <li>Guide</li>
-                    <li>Consult</li>
-                    {isLoggedIn ? (<li>Profile</li>) : null}
+                    <li><Link to="/">Guide</Link></li>
+                    <li><Link to="/consult">Consult</Link></li>
+                    {isLoggedIn ? (<li><Link to="/dashboard">Dashboard</Link></li>) : null}
                     <li>{isLoggedIn ? (
                     <button onClick={handleLogout}>Logout</button>) : (<button onClick={handleLogin}>Login</button>)}</li>
                 </ul>
