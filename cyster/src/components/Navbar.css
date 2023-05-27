@@ -3,6 +3,8 @@
     border-bottom: 2px solid black;
     display: flex;
     flex-direction: row;
+    position: fixed;
+    top: 0;
 }
 
 .logo_container{

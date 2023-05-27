@@ -1,0 +1,21 @@
+.main_foot{
+    width:100%;
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: fixed;
+    bottom: 0;
+}
+
+.about_container{
+    list-style-type: none;
+}
+
+.contact_container{
+    list-style-type: none;
+}
+
+.company_container{
+    list-style-type: none;
+}
