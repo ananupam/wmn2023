@@ -4,8 +4,6 @@
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    position: fixed;
-    bottom: 0;
 }
 
 .about_container{
