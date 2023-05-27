@@ -4,8 +4,11 @@ import './Navbar.css'
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+
     const handleLogin = () => {
       setIsLoggedIn(true);
+      console.log(localStorage.getItem("username"));
+      window.location.href = '/login';
     };
 
     const handleLogout = () => {

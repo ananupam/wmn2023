@@ -8,12 +8,52 @@ const Login = () => {
   const [phone, setPhone] = useState('');
   const [mode, setMode] = useState('login');
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (mode === 'login') {
-      // Do login logic here
+      const response = await fetch('http://localhost:5005/user/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: name,
+          email: email,
+          password: password,
+        })
+      });
+      const responseData = await response.json();
+      if(responseData['error']) {
+        console.log(responseData.error)
+        throw new Error(responseData.error);
+      }else{
+        console.log("login successful");
+        localStorage.setItem("username", name);
+        localStorage.setItem("email",email);
+        window.location.href = '/';
+      }
+      
+      
     } else {
-      // Do signup logic here
+      const response = await fetch('http://localhost:5005/user/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: name,
+          email: email,
+          password: password,
+        })
+      });
+      const responseData = await response.json();
+      if(responseData['error']) {
+        console.log(responseData.error)
+        throw new Error(responseData.error);
+      }
+      console.log("signup successful");
+      window.location.href = '/';
     }
   };
 
