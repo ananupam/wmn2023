@@ -25,10 +25,56 @@
 }
 
 .appointments_right{
-    font-family: montserrat;
     padding: 5%;
     padding-top: 3%;
     padding-bottom: 3%;
     background-color: #50ceac;
     
+}
+
+.heading{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+
+.mor_slots p{
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 15%;
+}
+
+.mor_slots label{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.eve_slots p{
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 15%;
+}
+
+.eve_slots label{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.appointments_right button{
+    margin-top: 15%;
+    margin-right: 5%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    color: grey;
+}
+
+.appointments_right input{
+    padding: 2%;
+    margin-top: 5%;
+    font-size: 15px;
+    border:none;
+    border-bottom: 1px solid #adadad;
+    border-radius: 4px;
 }

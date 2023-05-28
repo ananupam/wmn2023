@@ -32,6 +32,7 @@ const Appointment = () => {
       }else{
         console.log("appointment successful");
         setDoctor(gid);
+        window.location.href = '/';
       }
       
   };
@@ -52,7 +53,7 @@ const Appointment = () => {
                 <p> HASSLE-FREE BOOKINGS.</p>
             </div>
       <div className="appointments_right">
-      <p>{gid}</p>
+      <div className='heading'>APPOINTMENT FOR- {gid}</div>
         <input
             type='text'
             placeholder='Date'
@@ -61,8 +62,8 @@ const Appointment = () => {
           />
 
 
-<div className='mor_slots'>
-          <p>Morning 09:00 AM to 12:00 PM</p>
+          <div className='mor_slots'>
+          <p>MORNING SLOTS</p>
 
           <input
           type='radio'
@@ -101,8 +102,9 @@ const Appointment = () => {
           <label>12:00</label>
           </div>
 
+
           <div className='eve_slots'>
-          <h1>Evening 05:00 PM to 08:00 PM</h1>
+          <p>EVENING SLOTS</p>
 
           <input
           type='radio'

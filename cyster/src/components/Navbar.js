@@ -29,7 +29,7 @@ const Navbar = () => {
             <div className='logo_container'>CYSTER</div>
             <div className='element_container'>
                 <ul>
-                    <li><Link to="/">Guide</Link></li>
+                    <li><Link to="/guide">Guide</Link></li>
                     <li><Link to="/consult">Consult</Link></li>
                     {isLoggedIn ? (<li><Link to="/dashboard">Dashboard</Link></li>) : null}
                     <li>{isLoggedIn ? (

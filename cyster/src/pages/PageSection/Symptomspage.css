@@ -1,0 +1,49 @@
+.symptoms_heading{
+    font-size: 40px;
+    padding-bottom: 5%;
+}
+
+.symptomspage_body{
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    background-color:  #50ceac3b;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10%;
+    margin: 8%;
+    color:rgb(50, 49, 49);
+}
+
+.symptomspage_h2{
+    font-family: montserrat;
+    text-align: left;
+    font-size: 28px;
+    word-spacing: 1px;
+    letter-spacing: 0.3px;
+    padding-bottom: 3%;
+}
+
+.symptomspage_ul, .symptomspage_ul1, .symptomspage_li1, .symptomspage_li ,.symptomspage_p{
+    font-family: montserrat;
+    text-align: left;
+    font-size: 23px;
+    word-spacing: 1px;
+    letter-spacing: 0.3px;
+}
+
+.symptomspage_ul1, .symptomspage_li1{
+    list-style-type: circle;
+    padding-left: 2%;
+}
+
+.symptomspage_h3{
+    font-family: montserrat;
+    text-align: left;
+    font-size: 26px;
+    word-spacing: 1px;
+    letter-spacing: 0.3px;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
